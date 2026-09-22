@@ -48,3 +48,17 @@ form?.addEventListener('submit', (event) => {
 window.addEventListener('scroll', () => {
   header?.classList.toggle('is-scrolled', window.scrollY > 24);
 }, { passive: true });
+
+const revealTargets = document.querySelectorAll('.practice, .team, .contact');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.16 });
+  revealTargets.forEach((section) => revealObserver.observe(section));
+} else {
+  revealTargets.forEach((section) => section.classList.add('is-visible'));
+}

@@ -1,39 +1,42 @@
-# Di Lorenzo — Vanilla MVP
+# Di Lorenzo — Next.js + Tailwind
 
-Landing page responsiva de um escritório de advocacia, recriada a partir do modelo Figma `modelo1`. A primeira versão foi deliberadamente construída com **HTML, CSS e JavaScript puro** para abrir localmente com um clique, sem dependências, build ou servidor obrigatório.
+Landing page responsiva de um escritório de advocacia, migrada do MVP vanilla baseado no modelo Figma `modelo1` para **Next.js App Router + React + Tailwind CSS v4**.
 
-## Executar
-
-Abra `index.html` diretamente no navegador. Para uma prévia local com live reload opcional, use qualquer servidor estático, por exemplo:
+## Executar localmente
 
 ```bash
-python3 -m http.server 4173
+pnpm install
+pnpm dev
 ```
 
-Depois acesse `http://localhost:4173`.
+Acesse `http://localhost:3000`.
+
+Para validar produção:
+
+```bash
+pnpm typecheck
+pnpm build
+pnpm start
+```
 
 ## Estrutura
 
 ```text
-index.html          # estrutura semântica e conteúdo da LP
-css/base.css        # tokens, layout mobile-first e breakpoints
-js/app.js           # menu, navegação, formulário e slider
-assets/             # imagens exportadas do Figma, sem URLs externas
+app/
+  layout.tsx       # metadata, idioma e CSS global
+  page.tsx         # LP React client-side e interações
+  globals.css     # Tailwind v4 + tokens visuais e responsividade
+public/assets/    # imagens exportadas do Figma
+next.config.mjs
+postcss.config.mjs
 ```
 
-A composição mantém a sequência visual do Figma: hero, áreas de atuação, equipe, contato e rodapé. O conteúdo continua genérico por enquanto, pronto para substituição posterior.
+## Migração realizada
 
-## Direção visual
+A sequência visual do MVP foi preservada: hero fotográfico, áreas de atuação, equipe, contato e rodapé. O comportamento do menu mobile, slider de equipe, navegação por âncoras e feedback do formulário foi convertido de `js/app.js` para estado React com `useState`, `useEffect` e `onSubmit`. As imagens deixaram de ser referências relativas e passaram a ser servidas por `public/assets` usando `next/image`.
 
-A linguagem usa preto, carvão, cinza-gelo e dourado discreto, com `Montserrat` para títulos leves, `Gilda Display` para cards editoriais, `Marcellus SC` para a marca e `Inter` para leitura. O layout parte de 360px e amplia progressivamente para tablet e desktop, sem depender de posições absolutas para o fluxo das seções.
+O CSS original foi mantido como base visual para evitar regressões de fidelidade. A entrada `@import "tailwindcss"` e o pipeline PostCSS v4 deixam o projeto pronto para substituir gradualmente os seletores semânticos por utilities Tailwind.
 
-## Traduzir para Next.js + Tailwind
+## Próximos passos
 
-1. Crie um app Next.js com App Router e copie os arquivos de `assets/` para `public/assets/`.
-2. Transforme cada seção de `index.html` em um componente: `Hero`, `PracticeAreas`, `Team`, `Contact` e `Footer`.
-3. Mova as variáveis de `css/base.css` para `tailwind.config.ts` (cores `black`, `charcoal`, `mist`, `gold`) e use classes utilitárias para o layout.
-4. Mantenha as fontes no `app/layout.tsx` com `next/font/google`, substituindo os `<link>` do HTML.
-5. Converta `js/app.js` em hooks locais: `useState` para o menu e slider, e `onSubmit` para o formulário.
-6. Preserve `scroll-behavior`, os estados de foco e a media query de `prefers-reduced-motion` quando a camada de animação for portada.
-
-A versão vanilla não inclui backend nem envio real de mensagens; o formulário exibe uma confirmação local e deve ser conectado a uma API ou serviço de formulário no próximo ciclo.
+Substituir os conteúdos genéricos e integrar o formulário com um endpoint real. Para uma migração mais idiomática, extraia `Hero`, `PracticeAreas`, `Team`, `Contact` e `Footer` para `components/`, movendo as cores e espaçamentos de `app/globals.css` para um tema Tailwind compartilhado.

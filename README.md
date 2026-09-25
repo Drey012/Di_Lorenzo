@@ -1,6 +1,6 @@
 # Di Lorenzo — Vanilla MVP
 
-Landing page responsiva de um escritório de advocacia, recriada a partir do modelo Figma `modelo1`. A primeira versão foi deliberadamente construída com **HTML, CSS e JavaScript puro** para abrir localmente com um clique, sem dependências, build ou servidor obrigatório.
+Landing page responsiva de um escritório de advocacia, recriada a partir do [modelo Figma](https://www.figma.com/design/sRXzw1HJoYxdRwYExBtuZW/Projeto-DSM?node-id=5-53&t=7nqpiAEedsn4NTog-4). A primeira versão foi deliberadamente construída com **HTML, CSS e JavaScript puro** para abrir localmente com um clique, sem dependências, build ou servidor obrigatório.
 
 ## Executar
 
@@ -36,4 +36,4 @@ A linguagem usa preto, carvão, cinza-gelo e dourado discreto, com `Montserrat` 
 5. Converta `js/app.js` em hooks locais: `useState` para o menu e slider, e `onSubmit` para o formulário.
 6. Preserve `scroll-behavior`, os estados de foco e a media query de `prefers-reduced-motion` quando a camada de animação for portada.
 
-A versão vanilla não inclui backend nem envio real de mensagens; o formulário exibe uma confirmação local e deve ser conectado a uma API ou serviço de formulário no próximo ciclo.
+A versão vanilla ainda não inclui backend nem envio real de mensagens; o formulário exibe uma confirmação local e deve ser conectado a uma API ou serviço de formulário no próximo ciclo.

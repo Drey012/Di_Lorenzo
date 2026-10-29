@@ -2,3 +2,15 @@
 
 /* O asset exportado do Figma já contém a composição tipográfica do hero. */
 .hero{min-height:0;height:auto;padding:70px 0 0;display:block;background:var(--black)}.hero-image{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:804 / 1132;object-fit:cover}.hero-overlay,.hero-content{display:none}.hero-image-cta{position:absolute;z-index:3;left:5%;right:5%;top:47%;height:12%;border-radius:8px}.hero-image-cta:focus-visible{outline:2px solid var(--white);outline-offset:3px}@media(min-width:720px){.hero{padding-top:70px}.hero-image{max-width:780px;margin:0 auto}.hero-image-cta{left:calc(50% - 360px);right:calc(50% - 360px)}}
+
+/* Layout amplo: preserva o Figma no mobile e aproveita a viewport em desktops. */
+@media (min-width:1024px){
+  .site-header{width:100%;max-width:none;padding-inline:10vw}
+  .hero{width:100%;padding-inline:0}
+  .hero-image{width:80vw;max-width:none;margin:0 auto}
+  .hero-image-cta{left:10vw;right:10vw}
+  .practice,.team,.contact{padding-inline:0}
+  .section-inner{width:80vw;max-width:none}
+  .site-footer{padding-inline:0}
+  .footer-inner{width:80vw;max-width:none}
+}

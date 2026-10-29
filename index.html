@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Di Lorenzo — escritório de advocacia. Estratégia, clareza e presença para decisões importantes." />
-    <title>Di Lorenzo | Advocacia</title>
+    <meta name="description" content="Di Lorenzo — Escritório de Advocacia" />
+    <title>Di Lorenzo | Escritório de Advocacia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Inter:wght@300;400;500;600&family=Marcellus+SC&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
     <header class="site-header" data-header>
-      <a class="brand" href="#inicio" aria-label="Di Lorenzo, início"><span>DiLorenzo</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><b>Menu</b></button>
+      <a class="brand" href="#inicio" aria-label="Di Lorenzo, início"><img src="assets/update/50-13.webp" alt="Di Lorenzo" /></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu"><img src="assets/update/43-535.svg" alt="" /><span>Menu</span></button>
       <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
         <a href="#inicio">Home</a><a href="#atuacao">Atuação</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a>
       </nav>
@@ -22,69 +22,56 @@
 
     <main id="main-content">
       <section class="hero" id="inicio">
-        <img class="hero-image" src="assets/3-31.webp" alt="Profissionais analisando documentos em uma mesa de trabalho" />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="hero-kicker">Estratégia para decisões importantes</p>
-          <h1>Lorem ipsum<br />dolor sit</h1>
-          <p class="hero-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor fringilla porttitor.</p>
-          <a class="dark-button" href="#contato">Falar com um especialista</a>
-        </div>
-        <a class="scroll-cue" href="#atuacao"><span>Saiba mais</span><i></i></a>
+        <img class="hero-image" src="assets/update/43-453.webp" alt="Mesa de trabalho de um escritório de advocacia" />
+        <a class="hero-image-cta" href="#contato" aria-label="Entre em contato conosco"></a>
       </section>
 
       <section class="practice" id="atuacao">
         <div class="section-inner">
-          <p class="section-number">01 / atuação</p>
           <h2>Áreas de Atuação</h2>
-          <p class="section-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor fringilla porttitor.</p>
-          <div class="practice-grid">
-            <a class="practice-card" href="#contato"><span>Loren</span><img src="assets/7-172.webp" alt="" /></a>
-            <a class="practice-card" href="#contato"><span>Loren</span><img src="assets/7-175.webp" alt="" /></a>
-            <a class="practice-card" href="#contato"><span>Loren</span><img src="assets/7-168.webp" alt="" /></a>
-            <a class="practice-card" href="#contato"><span>Loren</span><img src="assets/7-174.webp" alt="" /></a>
+          <div class="practice-list">
+            <a class="practice-item" href="#contato"><div><strong>TÍTULO</strong><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis porta leo id maximus.</p></div><b>01</b></a>
+            <a class="practice-item" href="#contato"><div><strong>TÍTULO</strong><p>Proin elementum magna non dolor ultrices feugiat. Sed vitae iaculis lectus. Mauris non.</p></div><b>02</b></a>
+            <a class="practice-item" href="#contato"><div><strong>TÍTULO</strong><p>Vestibulum imperdiet tincidunt purus eget accumsan. Quisque feugiat sit amet urna non.</p></div><b>03</b></a>
+            <a class="practice-item" href="#contato"><div><strong>TÍTULO</strong><p>Phasellus at feugiat sem. In dictum ligula nec urna pulvinar tempor. In nec elementum.</p></div><b>04</b></a>
           </div>
         </div>
       </section>
 
       <section class="team" id="equipe">
         <div class="section-inner">
-          <p class="section-number">02 / presença</p>
           <h2>Nossa Equipe</h2>
-          <div class="team-card" data-team-card>
-            <img src="assets/7-200.webp" alt="Pessoa Exemplo, profissional do escritório" />
-            <div class="team-meta"><p class="team-name">Pessoa Exemplo</p><p><strong>Cargo</strong><br />Formação</p></div>
+          <div class="team-carousel" data-team-carousel>
+            <article class="team-card">
+              <div class="portrait-placeholder"><img src="assets/update/43-496.svg" alt="" /><span>[Portrait Placeholder]</span></div>
+              <div class="team-copy"><h3>NOME SOBRENOME</h3><p class="role">CARGO</p><span class="gold-divider"></span><p class="bio-label">Biografia</p><p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div>
+            </article>
           </div>
-          <div class="slider-controls" aria-label="Navegação da equipe"><button class="slider-dot is-active" type="button" aria-label="Membro 1"></button><button class="slider-dot" type="button" aria-label="Membro 2"></button><button class="slider-dot" type="button" aria-label="Membro 3"></button><button class="slider-dot" type="button" aria-label="Membro 4"></button></div>
+          <div class="carousel-dots" aria-label="Navegação da equipe"><button class="is-active" type="button" aria-label="Membro 1"></button><button type="button" aria-label="Membro 2"></button><button type="button" aria-label="Membro 3"></button></div>
         </div>
       </section>
 
       <section class="contact" id="contato">
         <div class="section-inner">
-          <p class="section-number">03 / conexão</p>
-          <h2>Entre em contato</h2>
-          <div class="contact-layout">
-            <p class="contact-copy">Conte-nos sobre o seu momento. Uma conversa inicial pode abrir caminhos mais claros.</p>
-            <form class="contact-form" data-contact-form>
-              <label>Nome<input type="text" name="nome" placeholder="Seu nome" required /></label>
-              <label>E-mail<input type="email" name="email" placeholder="email@gmail.com" required /></label>
-              <label>Mensagem<textarea name="mensagem" rows="3" placeholder="Como podemos ajudar?" required></textarea></label>
-              <button class="dark-button" type="submit">Enviar mensagem</button>
-            </form>
+          <h2>Contato e Localização</h2>
+          <div class="contact-info">
+            <div><span>Telefone</span><a href="tel:+5511954757572">(11) 95475-7572</a><a href="tel:+5511998324515">(11) 99832-4515</a></div>
+            <div><span>E-mail</span><a href="mailto:dilorenzo@adv.oabsp.org.br">dilorenzo@adv.oabsp.org.br</a></div>
+            <div><span>Endereço</span><address>Rua Professor Francisco Maffei, 387 São Paulo/SP</address></div>
           </div>
+          <div class="map-placeholder" aria-label="Espaço reservado para o mapa do Google Maps"><img src="assets/update/43-528.svg" alt="" /><span>MAPA</span></div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <div><a class="footer-brand" href="#inicio">DiLorenzo</a><p>Redes Sociais</p><div class="socials"><a href="#contato" aria-label="Instagram">◎</a><a href="#contato" aria-label="Facebook">f</a><a href="#contato" aria-label="LinkedIn">in</a></div></div>
-        <nav aria-label="Links do rodapé"><a href="#atuacao">Atuação</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a></nav>
-        <div class="footer-contact"><span>(XX) XXXX-XXXXX</span><span>email@gmail.com</span></div>
+        <a class="footer-brand" href="#inicio">DiLorenzzo</a>
+        <nav class="footer-nav" aria-label="Links do rodapé"><a href="#inicio">Home</a><a href="#atuacao">Atuação</a><a href="#equipe">Equipe</a><a href="#contato">Contato</a></nav>
+        <div class="socials"><a href="#contato" aria-label="Rede social 1"><img src="assets/update/43-547.svg" alt="" /></a><a href="#contato" aria-label="Rede social 2"><img src="assets/update/43-550.svg" alt="" /></a><a href="#contato" aria-label="Rede social 3"><img src="assets/update/43-553.svg" alt="" /></a></div>
+        <small>© Todos os direitos reservados.</small>
       </div>
-      <small>Direitos Reservados 2026</small>
     </footer>
-    <div class="toast" role="status" aria-live="polite" data-toast></div>
     <script src="js/app.js" defer></script>
   </body>
 </html>

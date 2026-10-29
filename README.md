@@ -1,39 +1,35 @@
-# Di Lorenzo — Vanilla MVP
+# Di Lorenzo — Vanilla Interface Update
 
-Landing page responsiva de um escritório de advocacia, recriada a partir do [modelo Figma](https://www.figma.com/design/sRXzw1HJoYxdRwYExBtuZW/Projeto-DSM?node-id=5-53&t=7nqpiAEedsn4NTog-4). A primeira versão foi deliberadamente construída com **HTML, CSS e JavaScript puro** para abrir localmente com um clique, sem dependências, build ou servidor obrigatório.
+Última reformulação visual da landing page jurídica baseada no frame Figma `alta`. A implementação continua simples de executar: HTML, CSS e JavaScript puro, sem build obrigatório.
 
 ## Executar
 
-Abra `index.html` diretamente no navegador. Para uma prévia local com live reload opcional, use qualquer servidor estático, por exemplo:
+Abra `index.html` diretamente no navegador ou rode:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Depois acesse `http://localhost:4173`.
+Acesse `http://localhost:4173`.
 
 ## Estrutura
 
 ```text
-index.html          # estrutura semântica e conteúdo da LP
-css/base.css        # tokens, layout mobile-first e breakpoints
-js/app.js           # menu, navegação, formulário e slider
-assets/             # imagens exportadas do Figma, sem URLs externas
+index.html          # estrutura semântica da landing page
+css/base.css        # tokens, layout responsivo e animações
+js/app.js           # menu, navegação e interações da equipe
+assets/update/      # assets exportados localmente do novo Figma
 ```
 
-A composição mantém a sequência visual do Figma: hero, áreas de atuação, equipe, contato e rodapé. O conteúdo continua genérico por enquanto, pronto para substituição posterior.
+## O que mudou
 
-## Direção visual
+- Hero escuro com imagem, título “Di Lorenzo”, subtítulo e CTA.
+- Áreas de atuação em quatro cards numerados.
+- Equipe em card com moldura dourada e navegação por pontos.
+- Contato apenas com telefone, e-mail e endereço; o formulário foi removido.
+- Área reservada e responsiva para futura integração do Google Maps.
+- Footer com links funcionais para as seções e ícones sociais locais.
+- Menu header preservado com abertura, fechamento, foco e navegação por âncoras.
+- Animações de entrada preservadas com suporte a `prefers-reduced-motion`.
 
-A linguagem usa preto, carvão, cinza-gelo e dourado discreto, com `Montserrat` para títulos leves, `Gilda Display` para cards editoriais, `Marcellus SC` para a marca e `Inter` para leitura. O layout parte de 360px e amplia progressivamente para tablet e desktop, sem depender de posições absolutas para o fluxo das seções.
-
-## Traduzir para Next.js + Tailwind
-
-1. Crie um app Next.js com App Router e copie os arquivos de `assets/` para `public/assets/`.
-2. Transforme cada seção de `index.html` em um componente: `Hero`, `PracticeAreas`, `Team`, `Contact` e `Footer`.
-3. Mova as variáveis de `css/base.css` para `tailwind.config.ts` (cores `black`, `charcoal`, `mist`, `gold`) e use classes utilitárias para o layout.
-4. Mantenha as fontes no `app/layout.tsx` com `next/font/google`, substituindo os `<link>` do HTML.
-5. Converta `js/app.js` em hooks locais: `useState` para o menu e slider, e `onSubmit` para o formulário.
-6. Preserve `scroll-behavior`, os estados de foco e a media query de `prefers-reduced-motion` quando a camada de animação for portada.
-
-A versão vanilla ainda não inclui backend nem envio real de mensagens; o formulário exibe uma confirmação local e deve ser conectado a uma API ou serviço de formulário no próximo ciclo.
+O conteúdo continua propositalmente mockado conforme o Figma. A conexão real do mapa, os dados definitivos, acessibilidade completa e comunicação serão tratados na próxima etapa.

@@ -5,6 +5,7 @@ const header = document.querySelector('[data-header]');
 menuToggle?.addEventListener('click', () => {
   const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
   menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
   siteNav?.classList.toggle('is-open', !isOpen);
   document.body.classList.toggle('menu-open', !isOpen);
 });
@@ -12,44 +13,20 @@ menuToggle?.addEventListener('click', () => {
 document.querySelectorAll('.site-nav a').forEach((link) => {
   link.addEventListener('click', () => {
     menuToggle?.setAttribute('aria-expanded', 'false');
+    menuToggle?.setAttribute('aria-label', 'Abrir menu');
     siteNav?.classList.remove('is-open');
     document.body.classList.remove('menu-open');
   });
 });
 
-const dots = [...document.querySelectorAll('.slider-dot')];
-dots.forEach((dot, index) => {
+document.querySelectorAll('.carousel-dots button').forEach((dot) => {
   dot.addEventListener('click', () => {
-    dots.forEach((item) => item.classList.remove('is-active'));
+    document.querySelectorAll('.carousel-dots button').forEach((item) => item.classList.remove('is-active'));
     dot.classList.add('is-active');
-    const card = document.querySelector('[data-team-card]');
-    if (card) card.dataset.active = String(index);
   });
 });
 
-const form = document.querySelector('[data-contact-form]');
-const toast = document.querySelector('[data-toast]');
-let toastTimer;
-form?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
-  }
-  form.reset();
-  if (toast) {
-    toast.textContent = 'Mensagem recebida. Em breve entraremos em contato.';
-    toast.classList.add('is-visible');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 4000);
-  }
-});
-
-window.addEventListener('scroll', () => {
-  header?.classList.toggle('is-scrolled', window.scrollY > 24);
-}, { passive: true });
-
-const revealTargets = document.querySelectorAll('.practice, .team, .contact');
+const revealTargets = document.querySelectorAll('.practice, .team, .contact, .site-footer');
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
@@ -57,8 +34,15 @@ if ('IntersectionObserver' in window) {
       entry.target.classList.add('is-visible');
       observer.unobserve(entry.target);
     });
-  }, { threshold: 0.16 });
-  revealTargets.forEach((section) => revealObserver.observe(section));
+  }, { threshold: 0.12 });
+  revealTargets.forEach((section) => {
+    section.classList.add('is-reveal');
+    revealObserver.observe(section);
+  });
 } else {
   revealTargets.forEach((section) => section.classList.add('is-visible'));
 }
+
+window.addEventListener('scroll', () => {
+  header?.classList.toggle('is-scrolled', window.scrollY > 24);
+}, { passive: true });

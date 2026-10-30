@@ -850,10 +850,15 @@ a:focus-visible {
   stroke-width: 1.8;
 }
 
-.libras-widget,
+.libras-widget {
+  z-index: 1100 ;
+  position: fixed;
+  top: calc(70px + 200px);
+}
+
 .libras-widget [vw-access-button],
 .libras-widget [vw-plugin-wrapper] {
-  z-index: 1100 !important;
+  z-index: 1100;
 }
 
 html[data-color-vision="deuteranopia"]

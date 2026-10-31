@@ -7,10 +7,10 @@ Landing page jurídica em HTML, CSS e JavaScript puro, baseada no frame Figma. N
 Abra `index.html` no navegador ou inicie um servidor local:
 
 ```bash
-python3 -m http.server 4173
+python server.py
 ```
 
-Acesse `http://localhost:4173`.
+Acesse `http://localhost:4173`. O servidor lê `GOOGLE_API_KEY` e `GOOGLE_PLACE_ID` do `.env` (ou das variáveis de ambiente) e disponibiliza a configuração do mapa somente para a página local. A chave é enviada ao navegador porque a API do Google Maps é cliente-side; restrinja-a no Google Cloud às APIs necessárias e aos domínios autorizados.
 
 ## Estrutura
 
@@ -19,6 +19,8 @@ index.html               # estrutura semântica da landing page e ferramentas de
 css/base.css             # tokens, layout responsivo, animações e estilos acessíveis
 js/app.js                # menu, navegação e interações da equipe
 js/accessibility.js      # daltonismo, escala de texto, narrador e inicialização VLibras
+js/maps.js               # carregamento do mapa do Google Maps com a configuração local
+server.py                # servidor estático local e endpoint de configuração do mapa
 assets/update/           # assets exportados localmente do Figma
 ```
 
@@ -35,8 +37,8 @@ assets/update/           # assets exportados localmente do Figma
 ## O que a página inclui
 
 - Hero escuro com imagem, áreas de atuação numeradas, cartão da equipa e navegação por pontos.
-- Contacto por telefone, e-mail e endereço, além de uma área reservada para o mapa.
+- Contacto por telefone, e-mail e endereço, além de um mapa interativo do Google Maps associado ao Place ID do escritório.
 - Rodapé com links para as secções e ícones sociais locais.
 - Menu responsivo e animações com suporte a `prefers-reduced-motion`.
 
-O conteúdo da landing page continua parcialmente de exemplo conforme o Figma. A ligação real do mapa, dados definitivos e destinos das redes sociais continuam pendentes.
+O conteúdo da landing page continua parcialmente de exemplo conforme o Figma. Dados definitivos e destinos das redes sociais continuam pendentes.

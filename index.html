@@ -192,12 +192,17 @@
               </address>
             </div>
           </div>
-          <div
-            class="map-placeholder"
-            aria-label="Espaço reservado para o mapa do Google Maps"
-          >
-            <img src="assets/update/43-528.svg" alt="" />
-            <span>MAPA</span>
+          <div class="map-placeholder">
+            <iframe
+              data-google-map
+              title="Mapa do escritório Di Lorenzo"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p class="map-status" data-map-status aria-live="polite">
+              Carregando mapa...
+            </p>
           </div>
         </div>
       </section>
@@ -341,5 +346,6 @@
 
     <script src="js/app.js" defer></script>
     <script src="js/accessibility.js" defer></script>
+    <script src="js/maps.js" defer></script>
   </body>
 </html>

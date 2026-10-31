@@ -1,8 +1,18 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('#site-nav');
 const header = document.querySelector('[data-header]');
+const desktopNav = window.matchMedia('(min-width: 1024px)');
+
+const closeMenu = () => {
+  menuToggle?.setAttribute('aria-expanded', 'false');
+  menuToggle?.setAttribute('aria-label', 'Abrir menu');
+  siteNav?.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
+};
 
 menuToggle?.addEventListener('click', () => {
+  if (desktopNav.matches) return;
+
   const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
   menuToggle.setAttribute('aria-expanded', String(!isOpen));
   menuToggle.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
@@ -10,13 +20,12 @@ menuToggle?.addEventListener('click', () => {
   document.body.classList.toggle('menu-open', !isOpen);
 });
 
+desktopNav.addEventListener('change', () => {
+  if (desktopNav.matches) closeMenu();
+});
+
 document.querySelectorAll('.site-nav a').forEach((link) => {
-  link.addEventListener('click', () => {
-    menuToggle?.setAttribute('aria-expanded', 'false');
-    menuToggle?.setAttribute('aria-label', 'Abrir menu');
-    siteNav?.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
-  });
+  link.addEventListener('click', closeMenu);
 });
 
 document.querySelectorAll('.carousel-dots button').forEach((dot) => {

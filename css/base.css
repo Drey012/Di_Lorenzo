@@ -303,8 +303,8 @@ a:focus-visible {
 }
 .team {
   background: var(--bg);
-  padding: 36px 20px 64px;
-  min-height: 716px;
+  padding: 36px 20px 48px;
+  min-height: auto;
 }
 .team h2 {
   margin-bottom: 20px;
@@ -460,58 +460,106 @@ a:focus-visible {
 .map-status.is-error {
   background: #777;
 }
+
 .site-footer {
   background: var(--black);
   padding: 36px 20px 30px;
 }
+
 .footer-inner {
   width: 100%;
-  max-width: 740px;
+  max-width: 1110px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "brand nav"
+    "socials nav"
+    "copyright copyright";
   gap: 16px;
 }
+
 .footer-brand {
+  grid-area: brand;
   color: var(--gold);
-  font-size: calc(20px * var(--a11y-font-scale, 1));
+  font-size: calc(26px * var(--a11y-font-scale, 1));
   font-weight: 800;
 }
+
 .footer-nav {
+  grid-area: nav;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 24px;
 }
+
 .footer-nav a {
   color: var(--white);
   font-size: calc(14px * var(--a11y-font-scale, 1));
   font-weight: 600;
 }
+
 .footer-nav a:hover {
   color: var(--gold);
 }
+
 .socials {
+  grid-area: socials;
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
+
 .socials a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   background: #f5f5f5;
   border: 1px solid #d1d1d1;
+  border-radius: 50%;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
+
+.socials a:hover {
+  background: var(--gold);
+  transform: translateY(-3px);
+}
+
 .socials img {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
+
 .site-footer small {
+  grid-area: copyright;
   display: block;
   text-align: center;
   color: #666;
   font-size: calc(10px * var(--a11y-font-scale, 1));
+}
+
+@media (max-width: 719px) {
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-nav {
+    margin-top: 8px;
+  }
+
+  .socials {
+    flex-direction: row;
+  }
+
+  .site-footer small {
+    align-self: center;
+  }
 }
 .is-reveal {
   opacity: 0;
@@ -878,6 +926,109 @@ html[data-color-vision="tritanopia"]
 @media (prefers-reduced-motion: reduce) {
   .accessibility-panel button,
   .accessibility-launcher {
+    transition: none;
+  }
+}
+
+
+.team-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding-inline: 34px;
+}
+
+.team-carousel {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+.team-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.team-card {
+  flex: 0 0 100%;
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: #121212;
+  color: var(--gold);
+  font-size: 22px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.carousel-prev {
+  left: -21px;
+}
+
+.carousel-next {
+  right: -21px;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.carousel-dots button {
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dots button.is-active {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: scale(1.2);
+}
+
+@media (max-width: 719px) {
+  .team-carousel-wrapper {
+    padding-inline: 0;
+  }
+
+  .carousel-arrow {
+    display: none;
+  }
+
+  .team-carousel {
+    touch-action: pan-x pan-y;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .team-carousel {
+    scroll-behavior: auto;
+  }
+
+  .carousel-arrow,
+  .carousel-dots button {
     transition: none;
   }
 }

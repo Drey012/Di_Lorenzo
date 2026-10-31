@@ -1,351 +1,335 @@
 <!doctype html>
 <html lang="pt-BR" data-color-vision="normal">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Di Lorenzo — Escritório de Advocacia" />
-    <title>Di Lorenzo | Escritório de Advocacia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/base.css" />
-  </head>
-  <body>
-    <svg class="color-filter-defs" aria-hidden="true" focusable="false">
-      <defs>
-        <filter id="a11y-deuteranopia" color-interpolation-filters="sRGB">
-          <feColorMatrix
-            type="matrix"
-            values="0.567322 0.860646 -0.227968 0 0
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Di Lorenzo — Escritório de Advocacia" />
+  <title>Di Lorenzo | Escritório de Advocacia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/base.css" />
+</head>
+
+<body>
+  <svg class="color-filter-defs" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="a11y-deuteranopia" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="0.567322 0.860646 -0.227968 0 0
                     0.280085 0.672501 0.047413 0 0
                     -0.011820 0.042940 0.968881 0 0
-                    0 0 0 1 0"
-          />
-        </filter>
-        <filter id="a11y-protanopia" color-interpolation-filters="sRGB">
-          <feColorMatrix
-            type="matrix"
-            values="0.152286 1.052583 -0.204868 0 0
+                    0 0 0 1 0" />
+      </filter>
+      <filter id="a11y-protanopia" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="0.152286 1.052583 -0.204868 0 0
                     0.114503 0.786281 0.099216 0 0
                     -0.003882 -0.048116 1.051998 0 0
-                    0 0 0 1 0"
-          />
-        </filter>
-        <filter id="a11y-tritanopia" color-interpolation-filters="sRGB">
-          <feColorMatrix
-            type="matrix"
-            values="1.255528 -0.076749 -0.178779 0 0
+                    0 0 0 1 0" />
+      </filter>
+      <filter id="a11y-tritanopia" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="1.255528 -0.076749 -0.178779 0 0
                     -0.078411 0.930809 0.147602 0 0
                     0.004733 0.691367 0.303900 0 0
-                    0 0 0 1 0"
-          />
-        </filter>
-      </defs>
-    </svg>
+                    0 0 0 1 0" />
+      </filter>
+    </defs>
+  </svg>
 
-    <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
+  <a class="skip-link" href="#main-content">Ir para o conteúdo</a>
 
-    <header class="site-header" data-header>
-      <a class="brand" href="#inicio" aria-label="Di Lorenzo, início">
-        <img src="assets/update/50-13.webp" alt="Di Lorenzo" />
-      </a>
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-nav"
-        aria-label="Abrir menu"
-      >
-        <img src="assets/update/43-535.svg" alt="" />
-        <span>Menu</span>
-      </button>
-      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Di Lorenzo, início">
+      <img src="assets/update/50-13.webp" alt="Di Lorenzo" />
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menu">
+      <img src="assets/update/43-535.svg" alt="" />
+      <span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+      <a href="#inicio">Home</a>
+      <a href="#atuacao">Atuação</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/update/43-453.svg" alt="" />
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="headline-block">
+          <h1 id="hero-title">Di Lorenzo</h1>
+          <span class="divider" aria-hidden="true"></span>
+          <p>Escritório de Advocacia</p>
+        </div>
+        <p class="hero-copy">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
+          nunc non feugiat facilisis. Proin vitae elementum magna.
+        </p>
+        <a class="hero-cta" href="#contato">Entre em contato conosco</a>
+      </div>
+    </section>
+
+    <section class="practice" id="atuacao" aria-labelledby="practice-title">
+      <div class="section-inner">
+        <h2 id="practice-title">Áreas de Atuação</h2>
+        <div class="practice-list">
+          <a class="practice-item" href="#contato">
+            <div>
+              <strong>TÍTULO</strong>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                facilisis porta leo id maximus.
+              </p>
+            </div>
+            <b aria-hidden="true">01</b>
+          </a>
+          <a class="practice-item" href="#contato">
+            <div>
+              <strong>TÍTULO</strong>
+              <p>
+                Proin elementum magna non dolor ultrices feugiat. Sed vitae
+                iaculis lectus. Mauris non.
+              </p>
+            </div>
+            <b aria-hidden="true">02</b>
+          </a>
+          <a class="practice-item" href="#contato">
+            <div>
+              <strong>TÍTULO</strong>
+              <p>
+                Vestibulum imperdiet tincidunt purus eget accumsan. Quisque
+                feugiat sit amet urna non.
+              </p>
+            </div>
+            <b aria-hidden="true">03</b>
+          </a>
+          <a class="practice-item" href="#contato">
+            <div>
+              <strong>TÍTULO</strong>
+              <p>
+                Phasellus at feugiat sem. In dictum ligula nec urna pulvinar
+                tempor. In nec elementum.
+              </p>
+            </div>
+            <b aria-hidden="true">04</b>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="team" id="equipe" aria-labelledby="team-title">
+      <div class="section-inner">
+        <h2 id="team-title">Nossa Equipe</h2>
+
+        <div class="team-carousel-wrapper">
+          <button class="carousel-arrow carousel-prev" type="button" aria-label="Funcionário anterior">
+            &#10094;
+          </button>
+
+          <div class="team-carousel" data-team-carousel>
+            <article class="team-card">
+              <div class="portrait-placeholder">
+                <img src="assets/update/43-496.svg" alt="" />
+                <span>Funcionário 1</span>
+              </div>
+              <div class="team-copy">
+                <h3>FUNCIONÁRIO 1</h3>
+                <p class="role">CARGO</p>
+                <span class="gold-divider" aria-hidden="true"></span>
+                <p class="bio-label">Biografia</p>
+                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <div class="portrait-placeholder">
+                <img src="assets/update/43-496.svg" alt="" />
+                <span>Funcionário 2</span>
+              </div>
+              <div class="team-copy">
+                <h3>FUNCIONÁRIO 2</h3>
+                <p class="role">CARGO</p>
+                <span class="gold-divider" aria-hidden="true"></span>
+                <p class="bio-label">Biografia</p>
+                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.</p>
+              </div>
+            </article>
+
+            <article class="team-card">
+              <div class="portrait-placeholder">
+                <img src="assets/update/43-496.svg" alt="" />
+                <span>Funcionário 3</span>
+              </div>
+              <div class="team-copy">
+                <h3>FUNCIONÁRIO 3</h3>
+                <p class="role">CARGO</p>
+                <span class="gold-divider" aria-hidden="true"></span>
+                <p class="bio-label">Biografia</p>
+                <p class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                  ut labore et dolore magna aliqua.</p>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Próximo funcionário">
+            &#10095;
+          </button>
+        </div>
+
+        <div class="carousel-dots" aria-label="Navegação da equipe">
+          <button class="is-active" type="button" aria-label="Funcionário 1" aria-pressed="true"></button>
+          <button type="button" aria-label="Funcionário 2" aria-pressed="false"></button>
+          <button type="button" aria-label="Funcionário 3" aria-pressed="false"></button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <h2 id="contact-title">Contato e Localização</h2>
+        <div class="contact-info">
+          <div>
+            <span>Telefone</span>
+            <a href="tel:+5511954757572">(11) 95475-7572</a>
+            <a href="tel:+5511998324515">(11) 99832-4515</a>
+          </div>
+          <div>
+            <span>E-mail</span>
+            <a href="mailto:dilorenzo@adv.oabsp.org.br">dilorenzo@adv.oabsp.org.br</a>
+          </div>
+          <div>
+            <span>Endereço</span>
+            <address>
+              Rua Professor Francisco Maffei, 387 São Paulo/SP
+            </address>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <iframe data-google-map title="Mapa do escritório Di Lorenzo" allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p class="map-status" data-map-status aria-live="polite">
+            Carregando mapa...
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-brand" href="#inicio">DiLorenzzo</a>
+      <nav class="footer-nav" aria-label="Links do rodapé">
         <a href="#inicio">Home</a>
         <a href="#atuacao">Atuação</a>
         <a href="#equipe">Equipe</a>
         <a href="#contato">Contato</a>
       </nav>
-    </header>
+      <div class="socials">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="" />
+        </a>
 
-    <main id="main-content">
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/update/43-453.svg" alt="" />
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content">
-          <div class="headline-block">
-            <h1 id="hero-title">Di Lorenzo</h1>
-            <span class="divider" aria-hidden="true"></span>
-            <p>Escritório de Advocacia</p>
-          </div>
-          <p class="hero-copy">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat
-            nunc non feugiat facilisis. Proin vitae elementum magna.
-          </p>
-          <a class="hero-cta" href="#contato">Entre em contato conosco</a>
-        </div>
-      </section>
+        <a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <img src="https://img.icons8.com/?size=100&id=30448&format=png&color=000000" alt="" />
+        </a>
 
-      <section class="practice" id="atuacao" aria-labelledby="practice-title">
-        <div class="section-inner">
-          <h2 id="practice-title">Áreas de Atuação</h2>
-          <div class="practice-list">
-            <a class="practice-item" href="#contato">
-              <div>
-                <strong>TÍTULO</strong>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                  facilisis porta leo id maximus.
-                </p>
-              </div>
-              <b aria-hidden="true">01</b>
-            </a>
-            <a class="practice-item" href="#contato">
-              <div>
-                <strong>TÍTULO</strong>
-                <p>
-                  Proin elementum magna non dolor ultrices feugiat. Sed vitae
-                  iaculis lectus. Mauris non.
-                </p>
-              </div>
-              <b aria-hidden="true">02</b>
-            </a>
-            <a class="practice-item" href="#contato">
-              <div>
-                <strong>TÍTULO</strong>
-                <p>
-                  Vestibulum imperdiet tincidunt purus eget accumsan. Quisque
-                  feugiat sit amet urna non.
-                </p>
-              </div>
-              <b aria-hidden="true">03</b>
-            </a>
-            <a class="practice-item" href="#contato">
-              <div>
-                <strong>TÍTULO</strong>
-                <p>
-                  Phasellus at feugiat sem. In dictum ligula nec urna pulvinar
-                  tempor. In nec elementum.
-                </p>
-              </div>
-              <b aria-hidden="true">04</b>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="team" id="equipe" aria-labelledby="team-title">
-        <div class="section-inner">
-          <h2 id="team-title">Nossa Equipe</h2>
-          <div class="team-carousel" data-team-carousel>
-            <article class="team-card">
-              <div class="portrait-placeholder">
-                <img src="assets/update/43-496.svg" alt="" />
-                <span>[Portrait Placeholder]</span>
-              </div>
-              <div class="team-copy">
-                <h3>NOME SOBRENOME</h3>
-                <p class="role">CARGO</p>
-                <span class="gold-divider" aria-hidden="true"></span>
-                <p class="bio-label">Biografia</p>
-                <p class="bio">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam.
-                </p>
-              </div>
-            </article>
-          </div>
-          <div class="carousel-dots" aria-label="Navegação da equipe">
-            <button
-              class="is-active"
-              type="button"
-              aria-label="Membro 1"
-            ></button>
-            <button type="button" aria-label="Membro 2"></button>
-            <button type="button" aria-label="Membro 3"></button>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact" id="contato" aria-labelledby="contact-title">
-        <div class="section-inner">
-          <h2 id="contact-title">Contato e Localização</h2>
-          <div class="contact-info">
-            <div>
-              <span>Telefone</span>
-              <a href="tel:+5511954757572">(11) 95475-7572</a>
-              <a href="tel:+5511998324515">(11) 99832-4515</a>
-            </div>
-            <div>
-              <span>E-mail</span>
-              <a href="mailto:dilorenzo@adv.oabsp.org.br"
-                >dilorenzo@adv.oabsp.org.br</a
-              >
-            </div>
-            <div>
-              <span>Endereço</span>
-              <address>
-                Rua Professor Francisco Maffei, 387 São Paulo/SP
-              </address>
-            </div>
-          </div>
-          <div class="map-placeholder">
-            <iframe
-              data-google-map
-              title="Mapa do escritório Di Lorenzo"
-              allowfullscreen
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <p class="map-status" data-map-status aria-live="polite">
-              Carregando mapa...
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <a class="footer-brand" href="#inicio">DiLorenzzo</a>
-        <nav class="footer-nav" aria-label="Links do rodapé">
-          <a href="#inicio">Home</a>
-          <a href="#atuacao">Atuação</a>
-          <a href="#equipe">Equipe</a>
-          <a href="#contato">Contato</a>
-        </nav>
-        <div class="socials">
-          <a href="#contato" aria-label="Rede social 1"
-            ><img src="assets/update/43-547.svg" alt=""
-          /></a>
-          <a href="#contato" aria-label="Rede social 2"
-            ><img src="assets/update/43-550.svg" alt=""
-          /></a>
-          <a href="#contato" aria-label="Rede social 3"
-            ><img src="assets/update/43-553.svg" alt=""
-          /></a>
-        </div>
-        <small>© Todos os direitos reservados.</small>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="" />
+        </a>
       </div>
-    </footer>
+      <small>© Todos os direitos reservados.</small>
+    </div>
+  </footer>
 
-    <div class="accessibility-tools">
-      <section
-        class="accessibility-panel"
-        id="a11y-panel"
-        aria-labelledby="a11y-title"
-        hidden
-      >
-        <div class="accessibility-panel-header">
-          <h2 id="a11y-title">Acessibilidade</h2>
-          <button
-            class="a11y-close"
-            type="button"
-            aria-label="Fechar painel de acessibilidade"
-            data-a11y-close
-          >
-            <span aria-hidden="true">×</span>
+  <div class="accessibility-tools">
+    <section class="accessibility-panel" id="a11y-panel" aria-labelledby="a11y-title" hidden>
+      <div class="accessibility-panel-header">
+        <h2 id="a11y-title">Acessibilidade</h2>
+        <button class="a11y-close" type="button" aria-label="Fechar painel de acessibilidade" data-a11y-close>
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <div class="a11y-control">
+        <label for="color-vision-mode">Filtro de daltonismo</label>
+        <select id="color-vision-mode">
+          <option value="normal">Normal</option>
+          <option value="deuteranopia">Deuteranopia</option>
+          <option value="protanopia">Protanopia</option>
+          <option value="tritanopia">Tritanopia</option>
+        </select>
+      </div>
+
+      <div class="a11y-control">
+        <span class="a11y-control-label" id="font-size-label">Tamanho do texto</span>
+        <div class="a11y-font-controls" role="group" aria-labelledby="font-size-label">
+          <button type="button" data-font-step="-1" aria-label="Diminuir o tamanho do texto">
+            A−
           </button>
+          <output id="font-size-output" aria-live="polite">100%</output>
+          <button type="button" data-font-step="1" aria-label="Aumentar o tamanho do texto">
+            A+
+          </button>
+          <button type="button" data-font-reset>Redefinir</button>
         </div>
-
-        <div class="a11y-control">
-          <label for="color-vision-mode">Filtro de daltonismo</label>
-          <select id="color-vision-mode">
-            <option value="normal">Normal</option>
-            <option value="deuteranopia">Deuteranopia</option>
-            <option value="protanopia">Protanopia</option>
-            <option value="tritanopia">Tritanopia</option>
-          </select>
-        </div>
-
-        <div class="a11y-control">
-          <span class="a11y-control-label" id="font-size-label"
-            >Tamanho do texto</span
-          >
-          <div
-            class="a11y-font-controls"
-            role="group"
-            aria-labelledby="font-size-label"
-          >
-            <button
-              type="button"
-              data-font-step="-1"
-              aria-label="Diminuir o tamanho do texto"
-            >
-              A−
-            </button>
-            <output id="font-size-output" aria-live="polite">100%</output>
-            <button
-              type="button"
-              data-font-step="1"
-              aria-label="Aumentar o tamanho do texto"
-            >
-              A+
-            </button>
-            <button type="button" data-font-reset>Redefinir</button>
-          </div>
-        </div>
-
-        <div class="a11y-control">
-          <label for="narrator-voice">Narrador</label>
-          <select id="narrator-voice" aria-label="Voz do narrador">
-            <option value="">Voz padrão do dispositivo</option>
-          </select>
-          <label for="narrator-rate">Velocidade da leitura</label>
-          <select id="narrator-rate">
-            <option value="0.8">Mais lenta</option>
-            <option value="1" selected>Normal</option>
-            <option value="1.2">Mais rápida</option>
-            <option value="1.5">Muito rápida</option>
-          </select>
-          <div
-            class="a11y-narrator-controls"
-            role="group"
-            aria-label="Controles do narrador"
-          >
-            <button type="button" data-narrator="start">Ouvir página</button>
-            <button type="button" data-narrator="pause" disabled>Pausar</button>
-            <button type="button" data-narrator="resume" disabled>
-              Continuar
-            </button>
-            <button type="button" data-narrator="stop" disabled>Parar</button>
-          </div>
-          <p class="a11y-status" id="narrator-status" aria-live="polite">
-            A leitura utiliza as vozes disponíveis no seu navegador ou
-            dispositivo.
-          </p>
-        </div>
-      </section>
-
-      <button
-        class="accessibility-launcher"
-        type="button"
-        aria-expanded="false"
-        aria-controls="a11y-panel"
-        data-a11y-toggle
-      >
-        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-          <circle cx="12" cy="12" r="9" />
-          <path d="M8.5 8.5h7M12 8.5v8M9.5 12.5h5" />
-        </svg>
-        <span>Acessibilidade</span>
-      </button>
-    </div>
-
-    <div vw class="enabled libras-widget" aria-label="Tradutor de Libras">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
       </div>
+
+      <div class="a11y-control">
+        <label for="narrator-voice">Narrador</label>
+        <select id="narrator-voice" aria-label="Voz do narrador">
+          <option value="">Voz padrão do dispositivo</option>
+        </select>
+        <label for="narrator-rate">Velocidade da leitura</label>
+        <select id="narrator-rate">
+          <option value="0.8">Mais lenta</option>
+          <option value="1" selected>Normal</option>
+          <option value="1.2">Mais rápida</option>
+          <option value="1.5">Muito rápida</option>
+        </select>
+        <div class="a11y-narrator-controls" role="group" aria-label="Controles do narrador">
+          <button type="button" data-narrator="start">Ouvir página</button>
+          <button type="button" data-narrator="pause" disabled>Pausar</button>
+          <button type="button" data-narrator="resume" disabled>
+            Continuar
+          </button>
+          <button type="button" data-narrator="stop" disabled>Parar</button>
+        </div>
+        <p class="a11y-status" id="narrator-status" aria-live="polite">
+          A leitura utiliza as vozes disponíveis no seu navegador ou
+          dispositivo.
+        </p>
+      </div>
+    </section>
+
+    <button class="accessibility-launcher" type="button" aria-expanded="false" aria-controls="a11y-panel"
+      data-a11y-toggle>
+      <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8.5 8.5h7M12 8.5v8M9.5 12.5h5" />
+      </svg>
+      <span>Acessibilidade</span>
+    </button>
+  </div>
+
+  <div vw class="enabled libras-widget" aria-label="Tradutor de Libras">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
+  </div>
 
-    <p class="visually-hidden" id="libras-status" aria-live="polite"></p>
+  <p class="visually-hidden" id="libras-status" aria-live="polite"></p>
 
-    <script src="js/app.js" defer></script>
-    <script src="js/accessibility.js" defer></script>
-    <script src="js/maps.js" defer></script>
-  </body>
+  <script src="js/app.js" defer></script>
+  <script src="js/accessibility.js" defer></script>
+  <script src="js/maps.js" defer></script>
+</body>
+
 </html>

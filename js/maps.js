@@ -1,15 +1,28 @@
 const mapFrame = document.querySelector('[data-google-map]');
 const mapStatus = document.querySelector('[data-map-status]');
 
+const STATIC_MAP_CONFIG = {
+  apiKey: 'AIzaSyDtly1BAFPBwr-hAfZOQpy-n7ToJzfhYnM',
+  placeId: 'ChIJ8bzs5TNOzpQREml5WbACMWY',
+};
+
+const getMapConfig = async () => {
+  try {
+    const response = await fetch('/api/maps-config', { cache: 'no-store' });
+    if (response.ok) {
+      return await response.json();
+    }
+  } catch {
+    // Segue para a configuração estática (GitHub Pages)
+  }
+
+  return STATIC_MAP_CONFIG;
+};
+
 const loadGoogleMap = async () => {
   try {
-    const response = await fetch('/api/maps-config');
-    if (!response.ok) {
-      throw new Error(`Configuração do mapa indisponível (${response.status}).`);
-    }
-
-    const { apiKey, placeId } = await response.json();
-    if (!apiKey || !placeId) {
+    const { apiKey, placeId } = await getMapConfig();
+    if (!apiKey || !placeId || apiKey === 'AIzaSyDtly1BAFPBwr-hAfZOQpy-n7ToJzfhYnM') {
       throw new Error('GOOGLE_API_KEY e GOOGLE_PLACE_ID são obrigatórios.');
     }
 

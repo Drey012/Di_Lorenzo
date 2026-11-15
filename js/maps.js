@@ -22,7 +22,7 @@ const getMapConfig = async () => {
 const loadGoogleMap = async () => {
   try {
     const { apiKey, placeId } = await getMapConfig();
-    if (!apiKey || !placeId || apiKey === 'AIzaSyDtly1BAFPBwr-hAfZOQpy-n7ToJzfhYnM') {
+    if (!apiKey || !placeId) {
       throw new Error('GOOGLE_API_KEY e GOOGLE_PLACE_ID são obrigatórios.');
     }
 

@@ -540,9 +540,6 @@ a:focus-visible {
   box-shadow: 0 6px 16px rgba(201, 160, 67, 0.35);
 }
 
-.socials a:hover img {
-  filter: brightness(0);
-}
 
 .socials img {
   width: 18px;

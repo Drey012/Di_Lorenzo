@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drey012.github.io/Di_Lorenzo/sitemap.xml
